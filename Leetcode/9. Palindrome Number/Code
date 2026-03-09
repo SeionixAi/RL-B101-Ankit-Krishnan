@@ -1,0 +1,14 @@
+class Solution(object):
+    def isPalindrome(self, x):
+        """
+        :type x: int
+        :rtype: bool
+        """
+        if x<0:
+            return False
+        num=x                   # let x = 1234
+        result=0        
+        while num!=0:
+            result=(result*10)+ num%10    # if result is 0, then 0*10 + 4
+            num = num // 10          # num is 1234, then it becomes 1234//10 = 123
+        return result==x            # comparison operator, returns true if value of result == value of x
